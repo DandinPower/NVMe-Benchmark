@@ -1,0 +1,1 @@
+#define NVME_SECTOR_SIZE 512

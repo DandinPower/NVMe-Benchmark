@@ -1,0 +1,9 @@
+RAID_PATH=/dev/md127
+NVME_PATH=/dev/nvme0n1
+NVME_PATH_2=/dev/nvme1n1
+SIZE=32505856
+PROCESS_NUM=2
+TEST_ROUNDS=10
+
+make clean && make
+sudo ./build/bin/benchmark $NVME_PATH $SIZE $TEST_ROUNDS $PROCESS_NUM $NVME_PATH_2
