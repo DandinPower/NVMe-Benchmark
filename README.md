@@ -18,20 +18,30 @@ sudo apt install mdadm
 sudo apt install fio
 ```
 
+## Description
+
+The scripts file already handle the raid0 setup and cleanup, so you don't need to worry about it.
+
 ## FIO Benchmark
 
 You can run the FIO benchmark by going to the following folder:
 
 ```bash
-cd scripts/fio
+cd fio_benchmark
 ```
 
-## RAID Setup / Reset
+Then, you can run the following command:
 
-You can setup the RAID by going to the following folder:
+- Test run multiple fio on multiple devices
 
 ```bash
-cd scripts/raid
+bash run_multiple_fio.sh
+```
+
+- Test run single fio on single raid0 device
+
+```bash
+bash run_raid0_fio.sh
 ```
 
 ## Liburing Benchmark

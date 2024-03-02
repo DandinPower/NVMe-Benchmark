@@ -1,1 +1,2 @@
 #define NVME_SECTOR_SIZE 512
+#define CHUNK_SIZE 4 * 1024 * 1024 // 4MB
