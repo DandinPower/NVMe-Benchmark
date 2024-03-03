@@ -1,19 +1,17 @@
 # Test Configuration
 IO_ENGINE=io_uring
 TOTAL_SIZE=10G
-BLOCK_SIZE=4k
-NUM_JOBS=10
+BLOCK_SIZE=128k
+NUM_JOBS=1
 IO_DEPTH=16
 
 # Constants
 RAID_PATH=/dev/md127
 NVME_PATH_0=/dev/nvme1n1
 NVME_PATH_1=/dev/nvme2n1
-RESULT_FOLDER=result/multiple_nvme_device
-WRITE_RESULT_PATH_0=$RESULT_FOLDER/write_0.txt
-WRITE_RESULT_PATH_1=$RESULT_FOLDER/write_1.txt
-READ_RESULT_PATH_0=$RESULT_FOLDER/read_0.txt
-READ_RESULT_PATH_1=$RESULT_FOLDER/read_1.txt
+RESULT_FOLDER=result/raid0/Job_${NUM_JOBS}_Block_${BLOCK_SIZE}
+WRITE_RESULT_PATH=$RESULT_FOLDER/write_0.txt
+READ_RESULT_PATH=$RESULT_FOLDER/read_0.txt
 
 # Function to stop the RAID
 stop_raid() {
