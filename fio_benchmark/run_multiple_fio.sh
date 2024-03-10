@@ -1,8 +1,8 @@
 # Test Configuration
 IO_ENGINE=io_uring
 TOTAL_SIZE=10G
-BLOCK_SIZE=4k
-NUM_JOBS=10
+BLOCK_SIZE=32M
+NUM_JOBS=1
 IO_DEPTH=16
 
 # Constants
